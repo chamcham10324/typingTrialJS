@@ -10,19 +10,22 @@
     const timer = document.getElementById('timer');
     const textList = [
         'Hello World',
-        'Good',
-        'I love JavaScript',
-        'This is MyApp',
-        'Welcome'
+        'Ritsumeikan Computer Club',
+        'JavaScript',
+        'Slack',
+        'Google Drive',
+        'Ritsumeikan',
+        'manaba+R'
     ];
 
     let TIME = 20;
     let count = 0;
+    let miss = 0;
     let state = true;
 
     // カウントダウン機能 functionの処理を1000ミリ秒ごとに繰り返す
     const countdown = setInterval(function () {
-        timer.textContent = 'Time Limit : ' + --TIME + 'second';
+        timer.textContent = --TIME;
         if (TIME <= 0) finish();
     }, 1000);
 
@@ -36,7 +39,9 @@
             document.getElementById('score').textContent = count;
             init();
         } else {
-            subject.textContent = '間違いです！';
+            subject.textContent = 'It\'s a mistake!';
+            miss++;
+            document.getElementById('miss').textContent = miss;
             setTimeout(function () { init() }, 1000)
         }
     });
