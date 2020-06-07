@@ -1,0 +1,16 @@
+body {
+    padding-top: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+
+
+#subject {
+    font-size: 48px;
+    letter-spacing: 3px;
+}
+
+.info {
+    color: #ccc;
+}
